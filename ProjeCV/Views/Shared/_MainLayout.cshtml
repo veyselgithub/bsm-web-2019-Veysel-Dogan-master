@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/Default/Index">Veysel|2019</a>
+            </div>
+            <ul class="nav navbar-nav">
+             
+                <li>@Html.ActionLink(ProjeCV.Resources.ProjeCVHomeTexts.hakkimda,"Index","Hakkimda")</li>
+                <li>@Html.ActionLink(ProjeCV.Resources.ProjeCVHomeTexts.deneyimlerim, "Index", "Deneyimler")</li>
+                <li>@Html.ActionLink(ProjeCV.Resources.ProjeCVHomeTexts.egitim, "Index", "Egitim")</li>
+                <li>@Html.ActionLink(ProjeCV.Resources.ProjeCVHomeTexts.yeteneklerim, "Index", "Yetenek")</li>
+                <li>@Html.ActionLink(ProjeCV.Resources.ProjeCVHomeTexts.hobilerim, "Index", "Hobiler")</li>
+                <li>@Html.ActionLink(ProjeCV.Resources.ProjeCVHomeTexts.konferanslarim, "Index", "Konferans")</li>
+                <li>@Html.ActionLink(ProjeCV.Resources.ProjeCVHomeTexts.dil, "Index", "Language")</li>
+                <li>@DateTime.Now.ToString()</li>
+                @Html.Partial("_LoginPartial")
+
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+</html>
+
